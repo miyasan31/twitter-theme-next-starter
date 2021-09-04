@@ -1,0 +1,44 @@
+# graphqlサーバーのエンドポイント
+schema: "http://localhost:4000"
+# schema: [
+#     {
+#       "https://api.ana-hunter.dev/v1/graphql": {
+#         headers: { "x-hasura-admin-secret": process.env.HASURA_ADMIN_SECRET },
+#       }
+#     }
+#     "src/apollo/client-schema.graphql"
+#   ]
+
+# どのコードファイルを見るか
+documents: "src/graphql/queries/*.ts"
+# documents: "src/{pages,components}/**/*.{ts,tsx}"
+
+overwrite: true
+
+generates:
+  # generateしたファイルをどこに作成するか
+  src/graphql/gql.tsx:
+    plugins:
+      - "typescript"
+      - "typescript-operations"
+      - "typescript-react-apollo"
+    config:
+      - skipTypename: false
+      - withHooks: true
+      - withHOC: false
+      - withComponent: false
+      - preResolveTypes: false
+      - namingConvention:
+          - typeNames: "pascal-case#pascalCase"
+          - enumValues: "upper-case#upperCase"
+      - scalars:
+          - uuid: "string"
+          - timestamptz: "string"
+          - bigint: "number"
+          - _text: "string[]"
+      - apolloReactCommonImportFrom: "@apollo/client"
+      - apolloReactHooksImportFrom: "@apollo/client"
+  # スキーマを検索するファイル
+  src/graphql/graphql.schema.json:
+    plugins:
+      - "introspection"
