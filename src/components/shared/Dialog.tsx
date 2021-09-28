@@ -45,26 +45,34 @@ export const Dialog: VFC<Props> = (props) => {
 		<AlertDialogPrimitive.Root>
 			<StyledOverlay />
 
-			<AlertDialogPrimitive.Trigger as={IconButton} color="slate">
-				{props.icon}
+			<AlertDialogPrimitive.Trigger asChild>
+				<IconButton color="slate">{props.icon}</IconButton>
 			</AlertDialogPrimitive.Trigger>
 
 			<AlertDialogContent>
 				<Flex direction="col" gap={0.75}>
-					<AlertDialogPrimitive.Title as={Text} bold size="xl">
-						{props.title}
+					<AlertDialogPrimitive.Title asChild>
+						<Text bold size="xl">
+							{props.title}
+						</Text>
 					</AlertDialogPrimitive.Title>
 
-					<AlertDialogPrimitive.Description as={Text} faded size="sm">
-						{props.subtitle}
+					<AlertDialogPrimitive.Description asChild>
+						<Text faded size="sm">
+							{props.subtitle}
+						</Text>
 					</AlertDialogPrimitive.Description>
 
 					<Flex direction="col" gap={0.75}>
-						<AlertDialogPrimitive.Action as={StitchesButton} color="red" size="lg">
-							{props.confirmationButtonLabel}
+						<AlertDialogPrimitive.Action asChild>
+							<StitchesButton color="red" size="lg">
+								{props.confirmationButtonLabel}
+							</StitchesButton>
 						</AlertDialogPrimitive.Action>
-						<AlertDialogPrimitive.Cancel as={StitchesButton} color="slate" size="lg" isOutline="slate">
-							{props.closeButtonLabel}
+						<AlertDialogPrimitive.Cancel asChild>
+							<StitchesButton color="slate" size="lg" isOutline="slate">
+								{props.closeButtonLabel}
+							</StitchesButton>
 						</AlertDialogPrimitive.Cancel>
 					</Flex>
 				</Flex>
