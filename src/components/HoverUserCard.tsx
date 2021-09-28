@@ -53,8 +53,8 @@ export const HoverUserCard: VFC<Props> = (props) => {
 
 	return (
 		<HoverCardPrimitive.Root>
-			<HoverCardPrimitive.Trigger asChild href="#" rel="noreferrer noopener">
-				<ImageTrigger>
+			<HoverCardPrimitive.Trigger asChild>
+				<ImageTrigger href="#" rel="noreferrer noopener">
 					<CircleImg src={props.iconPath} />
 				</ImageTrigger>
 			</HoverCardPrimitive.Trigger>
