@@ -66,13 +66,13 @@ const HomePage: NextPage = () => {
 					<Text>ボタン</Text>
 					<div className="flex gap-2">
 						<Button color="primary" onClick={handleClick}>
-							Blue
+							Primary
 						</Button>
 						<Button color="primary" isOutline onClick={handleClick}>
-							BlueOutline
+							PrimaryOutline
 						</Button>
 						<Button color="primary" isGhost under onClick={handleClick}>
-							BlueGhost
+							PrimaryGhost
 						</Button>
 					</div>
 					<div className="flex gap-3">
