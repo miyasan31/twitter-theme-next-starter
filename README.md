@@ -1,15 +1,12 @@
 # 環境構築
-- yarnを使う
-- nodeのバージョンは v14.15.1
-- nodenvを使うと便利
 
 1. ローカルにクローンする
 ```git
-git clone "URL"
+git clone https://github.com/miyasan31/next-ts-apollo-radixui-stitches.git
 ```
 2. node_modulesをインストールする
 ```yarn
-yarn install
+yarn
 ```
 3. 起動
 ```yarn
