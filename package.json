@@ -11,7 +11,7 @@
 		"codegen": "graphql-codegen --config src/graphql/codegen.yml"
 	},
 	"dependencies": {
-		"@apollo/client": "^3.4.15",
+		"@apollo/client": "3.4.15",
 		"@radix-ui/colors": "^0.1.7",
 		"@radix-ui/react-alert-dialog": "^0.1.0",
 		"@radix-ui/react-hover-card": "^0.1.0",
@@ -21,8 +21,8 @@
 		"@radix-ui/react-radio-group": "^0.1.0",
 		"@radix-ui/react-switch": "^0.1.0",
 		"@stitches/react": "^1.2.1",
-		"apollo-link-error": "^1.1.13",
-		"apollo-link-http": "^1.5.17",
+		"apollo-link-error": "1.1.13",
+		"apollo-link-http": "1.5.17",
 		"autoprefixer": "^10.3.6",
 		"graphql": "^15.6.0",
 		"next": "11.1.2",
