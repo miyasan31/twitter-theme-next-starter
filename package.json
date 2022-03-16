@@ -31,7 +31,7 @@
     "@radix-ui/react-id": "0.1.0",
     "@radix-ui/react-popover": "0.1.0",
     "@radix-ui/react-radio-group": "0.1.0",
-    "@radix-ui/react-switch": "0.1.0",
+    "@radix-ui/react-switch": "0.1.5",
     "@stitches/react": "1.2.7",
     "next": "12.1.0",
     "next-themes": "0.1.1",
