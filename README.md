@@ -5,7 +5,7 @@
 ### git clone
 
 ```bash
-git clone https://github.com/miyasan31/next-ts-radixui-stitches-starter.git
+git clone https://github.com/miyasan31/twitter-theme-next-starter.git
 ```
 
 ### dependencies install
