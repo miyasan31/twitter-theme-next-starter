@@ -2,7 +2,8 @@ import * as SwitchPrimitive from "@radix-ui/react-switch";
 import type { VFC } from "react";
 import { styled } from "src/utils";
 
-import { Flex, Label } from "~/components/ui";
+import { Flex } from "~/components/ui/Flex";
+import { Label } from "~/components/ui/Label";
 
 const SwitchRoot = styled(SwitchPrimitive.Root, {
   all: "unset",

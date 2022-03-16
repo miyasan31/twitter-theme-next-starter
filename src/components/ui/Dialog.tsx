@@ -2,8 +2,11 @@ import * as AlertDialogPrimitive from "@radix-ui/react-alert-dialog";
 import type { ReactNode, VFC } from "react";
 import { styled } from "src/utils";
 
-import { Flex, IconButton, StitchesButton, Text } from "~/components/ui";
 import { contentShow, overlayShow } from "~/components/ui/animation";
+import { StitchesButton } from "~/components/ui/Button";
+import { Flex } from "~/components/ui/Flex";
+import { IconButton } from "~/components/ui/IconButton";
+import { Text } from "~/components/ui/Text";
 
 const StyledOverlay = styled(AlertDialogPrimitive.Overlay, {
   backgroundColor: "$slateA11",

@@ -2,8 +2,12 @@ import * as HoverCardPrimitive from "@radix-ui/react-hover-card";
 import type { VFC } from "react";
 import { styled } from "src/utils";
 
-import { Button, CircleImg, Flex, NextLink, Text } from "~/components/ui";
 import { slideDownAndFade, slideLeftAndFade, slideRightAndFade, slideUpAndFade } from "~/components/ui/animation";
+import { Button } from "~/components/ui/Button";
+import { CircleImg } from "~/components/ui/CircleImg";
+import { Flex } from "~/components/ui/Flex";
+import { NextLink } from "~/components/ui/NextLink";
+import { Text } from "~/components/ui/Text";
 
 export const HoverCardContent = styled(HoverCardPrimitive.Content, {
   width: 300,

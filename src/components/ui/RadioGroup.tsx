@@ -2,7 +2,8 @@ import * as RadioGroupPrimitive from "@radix-ui/react-radio-group";
 import type { MouseEvent, VFC } from "react";
 import { styled } from "src/utils";
 
-import { Flex, Label } from "~/components/ui";
+import { Flex } from "~/components/ui/Flex";
+import { Label } from "~/components/ui/Label";
 
 const RadioGroupRadio = styled(RadioGroupPrimitive.Item, {
   all: "unset",

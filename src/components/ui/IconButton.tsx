@@ -1,7 +1,8 @@
 import type { ReactNode, VFC } from "react";
 import { styled } from "src/utils";
 
-import { Flex, Text } from "~/components/ui";
+import { Flex } from "~/components/ui/Flex";
+import { Text } from "~/components/ui/Text";
 
 export const IconButton = styled("button", {
   all: "unset",
