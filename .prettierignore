@@ -1,21 +1,41 @@
-node_modules
+# npm
+**/node_modules/*
+
+# package.json
+package-lock.json
 yarn.lock
-public
-renovate.json
-package.json
-tsconfig.json
-tailwind.config.js
-postcss.config.js
-next.config.js
-LICENSE.md
-README.md
-.github
-.gitignore
-.eslintrc.js
-.eslintignore
-.prettierrc.js
-.prettierignore
+
+# next
 .next
-.env.*
+public
 
+# graphql(submodule)
+graphql
 
+# git, github
+# .github
+# .gitignore
+
+# typescript
+# tsconfig.json
+
+# babel
+# .babelrc.js
+
+# eslint
+# .eslintrc.js
+# .eslintignore
+
+# prettiier
+# .prettierrc.js
+# .prettierignore
+
+# .env
+# .env.*
+
+# # docs
+# LICENSE.md
+# README.md
+
+# renovate
+# renovate.json
