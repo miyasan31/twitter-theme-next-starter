@@ -20,7 +20,7 @@
 		"@radix-ui/react-radio-group": "^0.1.0",
 		"@radix-ui/react-switch": "^0.1.0",
 		"@stitches/react": "^1.2.1",
-		"autoprefixer": "^10.3.6",
+		"autoprefixer": "10.4.4",
 		"next": "11.1.2",
 		"next-themes": "^0.0.15",
 		"prettier": "^2.5.1",
