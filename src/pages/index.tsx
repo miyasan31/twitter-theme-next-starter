@@ -7,11 +7,11 @@ import { Layout } from "~/components/ui/Layout";
 
 const RootPage: NextPage = () => {
   return (
-    <LayoutErrorBoundary>
-      <Layout>
+    <Layout>
+      <LayoutErrorBoundary>
         <Root />
-      </Layout>
-    </LayoutErrorBoundary>
+      </LayoutErrorBoundary>
+    </Layout>
   );
 };
 
