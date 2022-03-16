@@ -16,6 +16,7 @@ export {
 export { CountLabelIconButton, IconButton } from "./IconButton";
 export { Input } from "./Input";
 export { Label } from "./Label";
+export { Layout } from "./Layout";
 export { Anker, NextLink } from "./NextLink";
 export { RadioGroup } from "./RadioGroup";
 export { Switch } from "./Switch";

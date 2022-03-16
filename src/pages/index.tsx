@@ -1,7 +1,6 @@
 import { MixerHorizontalIcon } from "@radix-ui/react-icons";
 import type { NextPage } from "next";
 import { HoverUserCard } from "src/components/HoverUserCard";
-import { Layout } from "src/components/Layout";
 import {
   AllowLeftIcon,
   AllowRightIcon,
@@ -12,6 +11,7 @@ import {
   DotsIcon,
   FavoriteIcon,
   IconButton,
+  Layout,
   NextLink,
   RadioGroup,
   ReplyIcon,
