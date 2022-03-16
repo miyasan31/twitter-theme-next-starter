@@ -1,5 +1,41 @@
+# npm
 **/node_modules/*
+package.json
+package-lock.json
+yarn.lock
+
+# typescript
+tsconfig.json
+
+# babel
+.babelrc.js
+
+# eslint
+.eslintrc.js
+.eslintignore
+
+# prettiier
+.prettierrc.js
+.prettieriignore
+
+# renovate
+renovate.json
+
+# next
 **/out/*
 **/.next/*
-/.eslintrc.js
-/src/graphql/**
+next.config.js
+
+# tailwind
+tailwind.config.js
+postcss.config.js
+
+# graphql(submodule)
+graphql
+
+# jest
+jest.config.js
+coverage-summary.json
+
+# msw
+# mockServiceWorker.js
