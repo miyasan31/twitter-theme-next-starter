@@ -1,12 +1,14 @@
 import { IdProvider } from "@radix-ui/react-id";
 import type { AppProps } from "next/app";
 import { memo } from "react";
-import { WithTheme } from "src/components/theme";
+import { Toaster } from "react-hot-toast";
+import { WithTheme } from "src/components/functional/WithTheme";
 
 const MyApp = (props: AppProps) => {
   return (
     <IdProvider>
       <props.Component {...props.pageProps} />
+      <Toaster />
     </IdProvider>
   );
 };
