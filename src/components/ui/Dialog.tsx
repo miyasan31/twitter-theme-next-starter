@@ -9,7 +9,7 @@ import { IconButton } from "~/components/ui/IconButton";
 import { Text } from "~/components/ui/Text";
 
 const StyledOverlay = styled(AlertDialogPrimitive.Overlay, {
-  backgroundColor: "$slateA11",
+  backgroundColor: "$slate4",
   position: "fixed",
   inset: 0,
   "@media (prefers-reduced-motion: no-preference)": {
