@@ -37,21 +37,21 @@ const SwitchThumb = styled(SwitchPrimitive.Thumb, {
 });
 
 type Props = {
-  labalLeft?: string;
-  labalRight?: string;
+  labelLeft?: string;
+  labelRight?: string;
   defaultChecked?: boolean;
   isDark?: true;
   onClick?: () => void;
 };
 
-export const Switch: FC<Props> = (props) => {
+export const Switch: FC<Props> = ({ labelLeft, labelRight, defaultChecked, isDark, onClick }) => {
   return (
     <Flex items="center" gap={0.25}>
-      <Label id="s1">{props.labalLeft}</Label>
-      <SwitchRoot defaultChecked={props.defaultChecked} id="s1" onClick={props.onClick} isDark={props.isDark}>
+      <Label id="s1">{labelLeft}</Label>
+      <SwitchRoot defaultChecked={defaultChecked} id="s1" onClick={onClick} isDark={isDark}>
         <SwitchThumb />
       </SwitchRoot>
-      <Label id="s1">{props.labalRight}</Label>
+      <Label id="s1">{labelRight}</Label>
     </Flex>
   );
 };

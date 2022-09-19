@@ -28,10 +28,10 @@ type Props = {
   btn?: true;
 };
 
-export const NextLink: FC<Props> = (props) => {
+export const NextLink: FC<Props> = ({ children, href, btn }) => {
   return (
-    <Link href={props.href} passHref>
-      <Anker btn={props.btn}>{props.children}</Anker>
+    <Link href={href} passHref>
+      <Anker btn={btn}>{children}</Anker>
     </Link>
   );
 };

@@ -22,6 +22,8 @@ import { RadioGroup } from "~/components/shared/RadioGroup";
 import { Switch } from "~/components/shared/Switch";
 import { Text } from "~/components/shared/Text";
 
+const iconPath = "https://avatars.githubusercontent.com/u/71614432?v=4";
+
 export const Root: FC = () => {
   const onClick = () => {
     console.info("click!!");
@@ -63,10 +65,11 @@ export const Root: FC = () => {
         <Button color="primary" isOutline onClick={onClick}>
           PrimaryOutline
         </Button>
-        <Button color="primary" isGhost under onClick={onClick}>
+        <Button color="primary" isGhost onClick={onClick}>
           PrimaryGhost
         </Button>
       </Flex>
+
       <Flex gap={1}>
         <Button color="red" onClick={onClick}>
           Red
@@ -74,10 +77,11 @@ export const Root: FC = () => {
         <Button color="red" isOutline onClick={onClick}>
           RedOutline
         </Button>
-        <Button color="red" isGhost under onClick={onClick}>
+        <Button color="red" isGhost onClick={onClick}>
           RedGhost
         </Button>
       </Flex>
+
       <Flex gap={1}>
         <Button color="slate" onClick={onClick}>
           Slate
@@ -85,7 +89,7 @@ export const Root: FC = () => {
         <Button color="slate" isOutline onClick={onClick}>
           SlateOutline
         </Button>
-        <Button color="slate" isGhost under onClick={onClick}>
+        <Button color="slate" isGhost onClick={onClick}>
           SlateGhost
         </Button>
         <NextLink href="/" btn>
@@ -109,31 +113,29 @@ export const Root: FC = () => {
         </Button>
       </Flex>
 
+      <Text>ラジオボタン</Text>
       <Flex gap={1}>
-        <Flex gap={1}>
-          <Text>ラジオボタン</Text>
-          <RadioGroup
-            options={RADIO_OPTIONS}
-            defaultValue={RADIO_OPTIONS[0].value}
-            ariaLabel="radioGroup"
-            onClick={onClick}
-          />
-        </Flex>
+        <RadioGroup
+          options={RADIO_OPTIONS}
+          defaultValue={RADIO_OPTIONS[0].value}
+          ariaLabel="radioGroup"
+          onClick={onClick}
+        />
+      </Flex>
 
-        <Flex gap={1}>
-          <Text>スイッチ</Text>
-          <Switch labalLeft="off" labalRight="on" onClick={onClick} />
-        </Flex>
+      <Text>スイッチ</Text>
+      <Flex gap={1}>
+        <Switch labelLeft="OFF" labelRight="ON" onClick={onClick} />
       </Flex>
 
       <Text>ユーザーカード</Text>
       <HoverUserCard
         userId="miyasan_0301"
-        userName="みやさん | 学生"
-        profile="みやさんです。hogehogehogehogehogehogehogehogehogehogehogehogehogehoge"
+        userName="みやさん"
+        profile="みやさんです。"
         following={40}
         followers={120}
-        iconPath="https://pbs.twimg.com/profile_images/1410567316421578759/3rtKrTAL_400x400.jpg"
+        iconPath={iconPath}
       />
 
       <Text>ダイアログ</Text>
@@ -147,21 +149,21 @@ export const Root: FC = () => {
       />
 
       <Text>フォントサイズ</Text>
-      <Text size="xs">xs - TextTextText</Text>
-      <Text size="sm">sm - TextTextText</Text>
-      <Text size="base">base - TextTextText</Text>
-      <Text size="lg">lg - TextTextText</Text>
-      <Text size="xl">xl - TextTextText</Text>
-      <Text size="x2l">x2l - TextTextText</Text>
-      <Text size="x3l">x3l - TextTextText</Text>
-      <Text size="x4l">x4l - TextTextText</Text>
+      <Text size="xs">xs - テキスト</Text>
+      <Text size="sm">sm - テキスト</Text>
+      <Text size="base">base - テキスト</Text>
+      <Text size="lg">lg - テキスト</Text>
+      <Text size="xl">xl - テキスト</Text>
+      <Text size="x2l">x2l - テキスト</Text>
+      <Text size="x3l">x3l - テキスト</Text>
+      <Text size="x4l">x4l - テキスト</Text>
 
       <Text>デコレーション</Text>
-      <Text bold>太字太字太字</Text>
-      <Text faded>薄字薄字薄字</Text>
-      <Text under>下線下線下線</Text>
-      <Text color="blue">青字青字青字</Text>
-      <Text color="red">赤字赤字赤字</Text>
+      <Text bold>太字</Text>
+      <Text faded>薄字</Text>
+      <Text under>下線</Text>
+      <Text color="blue">青文字</Text>
+      <Text color="red">赤文字</Text>
     </>
   );
 };

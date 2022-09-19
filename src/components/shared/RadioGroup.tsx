@@ -78,14 +78,14 @@ type Props = {
   onClick: (e: MouseEvent<HTMLElement>) => void;
 };
 
-export const RadioGroup: FC<Props> = (props) => {
+export const RadioGroup: FC<Props> = ({ options, defaultValue, ariaLabel, onClick }) => {
   return (
-    <RadioGroupPrimitive.Root defaultValue={props.defaultValue} aria-label={props.ariaLabel}>
+    <RadioGroupPrimitive.Root defaultValue={defaultValue} aria-label={ariaLabel}>
       <Flex items="center">
-        {props?.options.map((item) => {
+        {options.map((item) => {
           return (
             <Flex key={item.id} items="center">
-              <RadioGroupRadio id={item.value} value={item.value} color={item.color} onClick={props.onClick}>
+              <RadioGroupRadio id={item.value} value={item.value} color={item.color} onClick={onClick}>
                 <RadioGroupIndicator color={item.color} />
               </RadioGroupRadio>
               <Label htmlFor={item.value}>{item.label}</Label>

@@ -49,11 +49,11 @@ type Props = {
   children: ReactNode;
 };
 
-export const Flex: FC<Props> = (props) => {
-  const gap: string = props.gap + "rem";
+export const Flex: FC<Props> = ({ direction, justify, items, gap = 0, children }) => {
+  const gapProps = gap + "rem";
   return (
-    <StitchesFlex direction={props.direction} justify={props.justify} items={props.items} css={{ gap }}>
-      {props.children}
+    <StitchesFlex direction={direction} justify={justify} items={items} css={{ gap: gapProps }}>
+      {children}
     </StitchesFlex>
   );
 };

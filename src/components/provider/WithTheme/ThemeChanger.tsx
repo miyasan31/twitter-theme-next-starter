@@ -29,12 +29,6 @@ export const ThemeChanger = () => {
   if (!isMounted) return null;
 
   return (
-    <Switch
-      labalLeft="is light"
-      labalRight="is dark"
-      defaultChecked={currentTheme !== "light"}
-      isDark
-      onClick={onClick}
-    />
+    <Switch labelLeft="light" labelRight="dark" defaultChecked={currentTheme !== "light"} isDark onClick={onClick} />
   );
 };

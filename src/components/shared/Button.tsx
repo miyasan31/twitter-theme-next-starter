@@ -103,17 +103,17 @@ type Props = {
   onClick: MouseEventHandler<HTMLButtonElement>;
 };
 
-export const Button: FC<Props> = (props) => {
+export const Button: FC<Props> = ({ children, color, size = "base", isGhost, isOutline, under, onClick }) => {
   return (
     <StitchesButton
-      color={props.color}
-      size={props.size}
-      isGhost={props.isGhost && props.color}
-      isOutline={props.isOutline && props.color}
-      under={props.under}
-      onClick={props.onClick}
+      color={color}
+      size={size}
+      isGhost={isGhost && color}
+      isOutline={isOutline && color}
+      under={under}
+      onClick={onClick}
     >
-      {props.children}
+      {children}
     </StitchesButton>
   );
 };

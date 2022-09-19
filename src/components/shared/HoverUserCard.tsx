@@ -51,7 +51,7 @@ type Props = {
   iconPath: string;
 };
 
-export const HoverUserCard: FC<Props> = (props) => {
+export const HoverUserCard: FC<Props> = ({ userId, userName, profile, following, followers, iconPath }) => {
   const onClick = () => {
     console.info("click!!");
   };
@@ -60,7 +60,7 @@ export const HoverUserCard: FC<Props> = (props) => {
     <HoverCardPrimitive.Root>
       <HoverCardPrimitive.Trigger asChild>
         <ImageTrigger href="#" rel="noreferrer noopener">
-          <CircleImg src={props.iconPath} />
+          <CircleImg src={iconPath} />
         </ImageTrigger>
       </HoverCardPrimitive.Trigger>
 
@@ -69,36 +69,36 @@ export const HoverUserCard: FC<Props> = (props) => {
 
         <Flex direction="col">
           <Flex justify="between">
-            <CircleImg size="lg" src={props.iconPath} />
+            <CircleImg size="lg" src={iconPath} />
             <Button color="primary" onClick={onClick}>
-              Following
+              フォロー
             </Button>
           </Flex>
 
           <Flex direction="col" gap={1}>
             <Text pt={0.5}>
-              <Text bold>{props.userName}</Text>
+              <Text bold>{userName}</Text>
               <NextLink href="/">
                 <Text faded>
                   {"@"}
-                  {props.userId}
+                  {userId}
                 </Text>
               </NextLink>
             </Text>
 
-            <Text>{props.profile}</Text>
+            <Text>{profile}</Text>
 
             <Flex gap={1}>
               <NextLink href="/">
                 <Flex>
-                  <Text bold>{props.following}</Text>
+                  <Text bold>{following}</Text>
                   <Text faded>&nbsp;Following</Text>
                 </Flex>
               </NextLink>
 
               <NextLink href="/">
                 <Flex>
-                  <Text bold>{props.followers}</Text>
+                  <Text bold>{followers}</Text>
                   <Text faded>&nbsp;Followers</Text>
                 </Flex>
               </NextLink>

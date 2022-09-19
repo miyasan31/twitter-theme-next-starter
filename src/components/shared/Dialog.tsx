@@ -44,38 +44,38 @@ type Props = {
   confirmationButtonLabel: string;
 };
 
-export const Dialog: FC<Props> = (props) => {
+export const Dialog: FC<Props> = ({ title, subtitle, icon, closeButtonLabel, confirmationButtonLabel }) => {
   return (
     <AlertDialogPrimitive.Root>
       <StyledOverlay />
 
       <AlertDialogPrimitive.Trigger asChild>
-        <IconButton color="slate">{props.icon}</IconButton>
+        <IconButton color="slate">{icon}</IconButton>
       </AlertDialogPrimitive.Trigger>
 
       <AlertDialogContent>
         <Flex direction="col" gap={0.75}>
           <AlertDialogPrimitive.Title asChild>
             <Text bold size="xl">
-              {props.title}
+              {title}
             </Text>
           </AlertDialogPrimitive.Title>
 
           <AlertDialogPrimitive.Description asChild>
             <Text faded size="sm">
-              {props.subtitle}
+              {subtitle}
             </Text>
           </AlertDialogPrimitive.Description>
 
           <Flex direction="col" gap={0.75}>
             <AlertDialogPrimitive.Action asChild>
               <StitchesButton color="red" size="lg">
-                {props.confirmationButtonLabel}
+                {confirmationButtonLabel}
               </StitchesButton>
             </AlertDialogPrimitive.Action>
             <AlertDialogPrimitive.Cancel asChild>
               <StitchesButton color="slate" size="lg" isOutline="slate">
-                {props.closeButtonLabel}
+                {closeButtonLabel}
               </StitchesButton>
             </AlertDialogPrimitive.Cancel>
           </Flex>

@@ -48,13 +48,13 @@ type Props = {
   count?: number;
 };
 
-export const CountLabelIconButton: FC<Props> = (props) => {
+export const CountLabelIconButton: FC<Props> = ({ children, color, size, count }) => {
   return (
     <Flex items="center" gap={0.25}>
-      <IconButton color={props.color} size={props.size}>
-        {props.children}
+      <IconButton color={color} size={size}>
+        {children}
       </IconButton>
-      <Text faded>{props.count}</Text>
+      <Text faded>{count}</Text>
     </Flex>
   );
 };

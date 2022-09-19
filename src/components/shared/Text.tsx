@@ -58,27 +58,27 @@ type Props = {
   pb?: number;
 };
 
-export const Text: FC<Props> = (props) => {
-  const pt: string = props.pt + "rem";
-  const py: string = props.py + "rem";
-  const pb: string = props.pb + "rem";
+export const Text: FC<Props> = ({ children, size, color, bold, faded, under, pt, py, pb }) => {
+  const ptProps = pt + "rem";
+  const pyProps = py + "rem";
+  const pbProps = pb + "rem";
 
   return (
     <StitchesText
-      bold={props.bold}
-      faded={props.faded}
-      under={props.under}
-      color={props.color}
+      bold={bold}
+      faded={faded}
+      under={under}
+      color={color}
       css={{
-        paddingTop: pt,
-        paddingY: py,
-        paddingBottom: pb,
+        paddingTop: ptProps,
+        paddingY: pyProps,
+        paddingBottom: pbProps,
 
-        fontSize: "$" + props.size,
-        lineHeight: "$" + props.size,
+        fontSize: "$" + size,
+        lineHeight: "$" + size,
       }}
     >
-      {props.children}
+      {children}
     </StitchesText>
   );
 };
