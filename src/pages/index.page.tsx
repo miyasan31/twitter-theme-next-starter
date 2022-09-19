@@ -1,9 +1,9 @@
 import type { NextPage } from "next";
 import React from "react";
 
-import { LayoutErrorBoundary } from "~/components/functional/ErrorBoundary";
 import { Root } from "~/components/page/Root";
-import { Layout } from "~/components/ui/Layout";
+import { LayoutErrorBoundary } from "~/components/provider/ErrorBoundary";
+import { Layout } from "~/components/shared/Layout";
 
 const RootPage: NextPage = () => {
   return (

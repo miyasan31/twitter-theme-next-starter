@@ -1,11 +1,11 @@
 import { MixerHorizontalIcon } from "@radix-ui/react-icons";
 import type { FC } from "react";
-import { ColorChanger, ThemeChanger } from "src/components/functional/WithTheme";
-import { HoverUserCard } from "src/components/ui/HoverUserCard";
+import { ColorChanger, ThemeChanger } from "src/components/provider/WithTheme";
+import { HoverUserCard } from "src/components/shared/HoverUserCard";
 
-import { Button } from "~/components/ui/Button";
-import { Dialog } from "~/components/ui/Dialog";
-import { Flex } from "~/components/ui/Flex";
+import { Button } from "~/components/shared/Button";
+import { Dialog } from "~/components/shared/Dialog";
+import { Flex } from "~/components/shared/Flex";
 import {
   AllowLeftIcon,
   AllowRightIcon,
@@ -15,15 +15,15 @@ import {
   ReplyIcon,
   RetweetIcon,
   ShareIcon,
-} from "~/components/ui/Icon";
-import { CountLabelIconButton, IconButton } from "~/components/ui/IconButton";
-import { NextLink } from "~/components/ui/NextLink";
-import { RadioGroup } from "~/components/ui/RadioGroup";
-import { Switch } from "~/components/ui/Switch";
-import { Text } from "~/components/ui/Text";
+} from "~/components/shared/Icon";
+import { CountLabelIconButton, IconButton } from "~/components/shared/IconButton";
+import { NextLink } from "~/components/shared/NextLink";
+import { RadioGroup } from "~/components/shared/RadioGroup";
+import { Switch } from "~/components/shared/Switch";
+import { Text } from "~/components/shared/Text";
 
 export const Root: FC = () => {
-  const handleClick = () => {
+  const onClick = () => {
     console.info("click!!");
   };
 
@@ -57,35 +57,35 @@ export const Root: FC = () => {
 
       <Text>ボタン</Text>
       <Flex gap={1}>
-        <Button color="primary" onClick={handleClick}>
+        <Button color="primary" onClick={onClick}>
           Primary
         </Button>
-        <Button color="primary" isOutline onClick={handleClick}>
+        <Button color="primary" isOutline onClick={onClick}>
           PrimaryOutline
         </Button>
-        <Button color="primary" isGhost under onClick={handleClick}>
+        <Button color="primary" isGhost under onClick={onClick}>
           PrimaryGhost
         </Button>
       </Flex>
       <Flex gap={1}>
-        <Button color="red" onClick={handleClick}>
+        <Button color="red" onClick={onClick}>
           Red
         </Button>
-        <Button color="red" isOutline onClick={handleClick}>
+        <Button color="red" isOutline onClick={onClick}>
           RedOutline
         </Button>
-        <Button color="red" isGhost under onClick={handleClick}>
+        <Button color="red" isGhost under onClick={onClick}>
           RedGhost
         </Button>
       </Flex>
       <Flex gap={1}>
-        <Button color="slate" onClick={handleClick}>
+        <Button color="slate" onClick={onClick}>
           Slate
         </Button>
-        <Button color="slate" isOutline onClick={handleClick}>
+        <Button color="slate" isOutline onClick={onClick}>
           SlateOutline
         </Button>
-        <Button color="slate" isGhost under onClick={handleClick}>
+        <Button color="slate" isGhost under onClick={onClick}>
           SlateGhost
         </Button>
         <NextLink href="/" btn>
@@ -95,15 +95,15 @@ export const Root: FC = () => {
 
       <Text>アイコン付き</Text>
       <Flex gap={1}>
-        <Button color="primary" onClick={handleClick}>
+        <Button color="primary" onClick={onClick}>
           <AllowLeftIcon size={15} />
           Back
         </Button>
-        <Button color="primary" isOutline onClick={handleClick}>
+        <Button color="primary" isOutline onClick={onClick}>
           Next
           <AllowRightIcon size={15} />
         </Button>
-        <Button color="primary" isGhost onClick={handleClick}>
+        <Button color="primary" isGhost onClick={onClick}>
           <CloseIcon size={15} />
           Close
         </Button>
@@ -113,16 +113,16 @@ export const Root: FC = () => {
         <Flex gap={1}>
           <Text>ラジオボタン</Text>
           <RadioGroup
-            options={RADIO_OPTIONOS}
-            defaultValue={RADIO_OPTIONOS[0].value}
+            options={RADIO_OPTIONS}
+            defaultValue={RADIO_OPTIONS[0].value}
             ariaLabel="radioGroup"
-            onClick={handleClick}
+            onClick={onClick}
           />
         </Flex>
 
         <Flex gap={1}>
           <Text>スイッチ</Text>
-          <Switch labalLeft="off" labalRight="on" onClick={handleClick} />
+          <Switch labalLeft="off" labalRight="on" onClick={onClick} />
         </Flex>
       </Flex>
 
@@ -173,7 +173,7 @@ type OptionsProps = {
   color?: "blue" | "amber" | "crimson" | "violet" | "orange" | "green";
 };
 
-const RADIO_OPTIONOS: OptionsProps[] = [
+const RADIO_OPTIONS: OptionsProps[] = [
   { id: "1", label: "OFF", value: "off" },
   { id: "2", label: "ON", value: "on" },
 ];
