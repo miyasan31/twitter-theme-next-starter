@@ -1,4 +1,4 @@
-import { createTheme } from "src/utils";
+import { createTheme } from "~/libs/stiches";
 
 import { dark } from "./dark";
 

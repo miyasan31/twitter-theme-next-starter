@@ -1,4 +1,4 @@
-import { styled } from "src/utils";
+import { styled } from "~/libs/stiches";
 
 export const CircleImg = styled("img", {
   display: "block",

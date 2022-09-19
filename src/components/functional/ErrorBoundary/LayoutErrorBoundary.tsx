@@ -1,4 +1,4 @@
-import type { ReactNode, VFC } from "react";
+import type { FC, ReactNode } from "react";
 import { ErrorBoundary } from "react-error-boundary";
 
 type ErrorFallbackProps = {
@@ -6,13 +6,12 @@ type ErrorFallbackProps = {
   resetErrorBoundary: () => void;
 };
 
-const ErrorFallback: VFC<ErrorFallbackProps> = (props) => {
+const ErrorFallback: FC<ErrorFallbackProps> = ({ error, resetErrorBoundary: onReset }) => {
   return (
     <div role="alert">
       <p>エラーが発生しました。</p>
-      <pre>{props.error.message}</pre>
-      {/* eslint-disable-next-line react/jsx-handler-names */}
-      <button onClick={props.resetErrorBoundary}>Try again</button>
+      <pre>{error.message}</pre>
+      <button onClick={onReset}>Try again</button>
     </div>
   );
 };
@@ -22,10 +21,10 @@ type LayoutErrorBoundaryProps = {
   onReset?: () => void;
 };
 
-export const LayoutErrorBoundary: VFC<LayoutErrorBoundaryProps> = (props) => {
+export const LayoutErrorBoundary: FC<LayoutErrorBoundaryProps> = ({ children, onReset }) => {
   return (
-    <ErrorBoundary FallbackComponent={ErrorFallback} onReset={props.onReset}>
-      {props.children}
+    <ErrorBoundary FallbackComponent={ErrorFallback} onReset={onReset}>
+      {children}
     </ErrorBoundary>
   );
 };

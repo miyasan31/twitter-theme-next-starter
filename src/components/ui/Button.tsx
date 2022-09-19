@@ -1,5 +1,6 @@
-import type { MouseEventHandler, ReactNode, VFC } from "react";
-import { styled } from "src/utils";
+import type { FC, MouseEventHandler, ReactNode } from "react";
+
+import { styled } from "~/libs/stiches";
 
 export const StitchesButton = styled("button", {
   all: "unset",
@@ -102,7 +103,7 @@ type Props = {
   onClick: MouseEventHandler<HTMLButtonElement>;
 };
 
-export const Button: VFC<Props> = (props) => {
+export const Button: FC<Props> = (props) => {
   return (
     <StitchesButton
       color={props.color}

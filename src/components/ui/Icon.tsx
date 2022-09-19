@@ -1,10 +1,10 @@
-import type { VFC } from "react";
+import type { FC } from "react";
 
 type Props = {
   size: 15 | 30 | 45;
 };
 
-export const AllowLeftIcon: VFC<Props> = (props) => {
+export const AllowLeftIcon: FC<Props> = (props) => {
   return (
     <svg width={props.size} height={props.size} viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
       <path
@@ -17,7 +17,7 @@ export const AllowLeftIcon: VFC<Props> = (props) => {
   );
 };
 
-export const AllowRightIcon: VFC<Props> = (props) => {
+export const AllowRightIcon: FC<Props> = (props) => {
   return (
     <svg width={props.size} height={props.size} viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
       <path
@@ -30,7 +30,7 @@ export const AllowRightIcon: VFC<Props> = (props) => {
   );
 };
 
-export const CloseIcon: VFC<Props> = (props) => {
+export const CloseIcon: FC<Props> = (props) => {
   return (
     <svg width={props.size} height={props.size} viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
       <path
@@ -43,7 +43,7 @@ export const CloseIcon: VFC<Props> = (props) => {
   );
 };
 
-export const DotsIcon: VFC<Props> = (props) => {
+export const DotsIcon: FC<Props> = (props) => {
   return (
     <svg width={props.size} height={props.size} viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
       <path
@@ -56,7 +56,7 @@ export const DotsIcon: VFC<Props> = (props) => {
   );
 };
 
-export const ReplyIcon: VFC<Props> = (props) => {
+export const ReplyIcon: FC<Props> = (props) => {
   return (
     <svg width={props.size} height={props.size} viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
       <path
@@ -69,7 +69,7 @@ export const ReplyIcon: VFC<Props> = (props) => {
   );
 };
 
-export const RetweetIcon: VFC<Props> = (props) => {
+export const RetweetIcon: FC<Props> = (props) => {
   return (
     <svg width={props.size} height={props.size} viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
       <path
@@ -82,7 +82,7 @@ export const RetweetIcon: VFC<Props> = (props) => {
   );
 };
 
-export const FavoriteIcon: VFC<Props> = (props) => {
+export const FavoriteIcon: FC<Props> = (props) => {
   return (
     <svg width={props.size} height={props.size} viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
       <path
@@ -95,7 +95,7 @@ export const FavoriteIcon: VFC<Props> = (props) => {
   );
 };
 
-export const ShareIcon: VFC<Props> = (props) => {
+export const ShareIcon: FC<Props> = (props) => {
   return (
     <svg width={props.size} height={props.size} viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
       <path

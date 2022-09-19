@@ -1,4 +1,4 @@
-import { styled } from "src/utils";
+import { styled } from "~/libs/stiches";
 
 export const Layout = styled("main", {
   display: "flex",

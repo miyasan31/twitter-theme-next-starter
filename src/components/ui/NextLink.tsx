@@ -1,6 +1,7 @@
 import Link from "next/link";
-import type { ReactNode, VFC } from "react";
-import { styled } from "src/utils";
+import type { FC, ReactNode } from "react";
+
+import { styled } from "~/libs/stiches";
 
 export const Anker = styled("a", {
   "&:hover": { textDecoration: "underline" },
@@ -27,7 +28,7 @@ type Props = {
   btn?: true;
 };
 
-export const NextLink: VFC<Props> = (props) => {
+export const NextLink: FC<Props> = (props) => {
   return (
     <Link href={props.href} passHref>
       <Anker btn={props.btn}>{props.children}</Anker>

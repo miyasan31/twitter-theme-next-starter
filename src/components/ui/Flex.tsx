@@ -1,5 +1,6 @@
-import type { ReactNode, VFC } from "react";
-import { styled } from "src/utils";
+import type { FC, ReactNode } from "react";
+
+import { styled } from "~/libs/stiches";
 
 const StitchesFlex = styled("div", {
   display: "flex",
@@ -48,7 +49,7 @@ type Props = {
   children: ReactNode;
 };
 
-export const Flex: VFC<Props> = (props) => {
+export const Flex: FC<Props> = (props) => {
   const gap: string = props.gap + "rem";
   return (
     <StitchesFlex direction={props.direction} justify={props.justify} items={props.items} css={{ gap }}>

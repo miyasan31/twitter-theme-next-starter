@@ -1,9 +1,9 @@
 import * as RadioGroupPrimitive from "@radix-ui/react-radio-group";
-import type { MouseEvent, VFC } from "react";
-import { styled } from "src/utils";
+import type { FC, MouseEvent } from "react";
 
 import { Flex } from "~/components/ui/Flex";
 import { Label } from "~/components/ui/Label";
+import { styled } from "~/libs/stiches";
 
 const RadioGroupRadio = styled(RadioGroupPrimitive.Item, {
   all: "unset",
@@ -78,7 +78,7 @@ type Props = {
   onClick: (e: MouseEvent<HTMLElement>) => void;
 };
 
-export const RadioGroup: VFC<Props> = (props) => {
+export const RadioGroup: FC<Props> = (props) => {
   return (
     <RadioGroupPrimitive.Root defaultValue={props.defaultValue} aria-label={props.ariaLabel}>
       <Flex items="center">

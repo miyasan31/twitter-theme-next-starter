@@ -1,5 +1,6 @@
-import type { ReactNode, VFC } from "react";
-import { styled } from "src/utils";
+import type { FC, ReactNode } from "react";
+
+import { styled } from "~/libs/stiches";
 
 export const StitchesText = styled("div", {
   margin: 0,
@@ -57,7 +58,7 @@ type Props = {
   pb?: number;
 };
 
-export const Text: VFC<Props> = (props) => {
+export const Text: FC<Props> = (props) => {
   const pt: string = props.pt + "rem";
   const py: string = props.py + "rem";
   const pb: string = props.pb + "rem";

@@ -1,6 +1,5 @@
 import * as HoverCardPrimitive from "@radix-ui/react-hover-card";
-import type { VFC } from "react";
-import { styled } from "src/utils";
+import type { FC } from "react";
 
 import { slideDownAndFade, slideLeftAndFade, slideRightAndFade, slideUpAndFade } from "~/components/ui/animation";
 import { Button } from "~/components/ui/Button";
@@ -8,6 +7,7 @@ import { CircleImg } from "~/components/ui/CircleImg";
 import { Flex } from "~/components/ui/Flex";
 import { NextLink } from "~/components/ui/NextLink";
 import { Text } from "~/components/ui/Text";
+import { styled } from "~/libs/stiches";
 
 export const HoverCardContent = styled(HoverCardPrimitive.Content, {
   width: 300,
@@ -51,8 +51,8 @@ type Props = {
   iconPath: string;
 };
 
-export const HoverUserCard: VFC<Props> = (props) => {
-  const handleClick = () => {
+export const HoverUserCard: FC<Props> = (props) => {
+  const onClick = () => {
     console.info("click!!");
   };
 
@@ -70,7 +70,7 @@ export const HoverUserCard: VFC<Props> = (props) => {
         <Flex direction="col">
           <Flex justify="between">
             <CircleImg size="lg" src={props.iconPath} />
-            <Button color="primary" onClick={handleClick}>
+            <Button color="primary" onClick={onClick}>
               Following
             </Button>
           </Flex>

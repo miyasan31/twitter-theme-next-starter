@@ -32,7 +32,6 @@ import {
 /**
  * @package
  */
-
 export const dark = {
   ...amberDark,
   ...blueDark,

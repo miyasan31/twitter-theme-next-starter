@@ -1,6 +1,6 @@
 import type { AppProps } from "next/app";
 import { ThemeProvider, useTheme } from "next-themes";
-import type { VFC } from "react";
+import type { FC } from "react";
 import { useEffect } from "react";
 
 import {
@@ -16,12 +16,15 @@ import {
   lightGreen,
   lightOrange,
   lightViolet,
-} from "~/utils/theme";
+} from "~/libs/stiches/theme";
 
 type AppPage = (props: AppProps) => JSX.Element;
 
+/**
+ * @package
+ */
 export const WithTheme = (Component: AppPage) => {
-  const withTheme = (props: AppProps) => {
+  return (props: AppProps) => {
     return (
       <ThemeProvider
         attribute="class"
@@ -46,11 +49,9 @@ export const WithTheme = (Component: AppPage) => {
       </ThemeProvider>
     );
   };
-
-  return withTheme;
 };
 
-const InitTheme: VFC<{ children: JSX.Element }> = (props) => {
+const InitTheme: FC<{ children: JSX.Element }> = (props) => {
   const { resolvedTheme, setTheme } = useTheme();
 
   useEffect(() => {

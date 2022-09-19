@@ -1,8 +1,8 @@
-import type { ReactNode, VFC } from "react";
-import { styled } from "src/utils";
+import type { FC, ReactNode } from "react";
 
 import { Flex } from "~/components/ui/Flex";
 import { Text } from "~/components/ui/Text";
+import { styled } from "~/libs/stiches";
 
 export const IconButton = styled("button", {
   all: "unset",
@@ -48,7 +48,7 @@ type Props = {
   count?: number;
 };
 
-export const CountLabelIconButton: VFC<Props> = (props) => {
+export const CountLabelIconButton: FC<Props> = (props) => {
   return (
     <Flex items="center" gap={0.25}>
       <IconButton color={props.color} size={props.size}>

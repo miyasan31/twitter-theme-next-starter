@@ -1,9 +1,9 @@
 import * as SwitchPrimitive from "@radix-ui/react-switch";
-import type { VFC } from "react";
-import { styled } from "src/utils";
+import type { FC } from "react";
 
 import { Flex } from "~/components/ui/Flex";
 import { Label } from "~/components/ui/Label";
+import { styled } from "~/libs/stiches";
 
 const SwitchRoot = styled(SwitchPrimitive.Root, {
   all: "unset",
@@ -44,7 +44,7 @@ type Props = {
   onClick?: () => void;
 };
 
-export const Switch: VFC<Props> = (props) => {
+export const Switch: FC<Props> = (props) => {
   return (
     <Flex items="center" gap={0.25}>
       <Label id="s1">{props.labalLeft}</Label>

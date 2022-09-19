@@ -1,13 +1,13 @@
-import { createTheme } from "src/utils";
+import { createTheme } from "~/libs/stiches";
 
-import { dark } from "./dark";
+import { light } from "./light";
 
 /**
  * @package
  */
-export const darkOrange = createTheme("dark_orange", {
+export const lightOrange = createTheme("light_orange", {
   colors: {
-    ...dark,
+    ...light,
     primary1: "$orange1",
     primary2: "$orange2",
     primary3: "$orange3",

@@ -5,7 +5,6 @@ import { utils } from "./utils";
 /**
  * @package
  */
-
 export const { styled, css, globalCss, keyframes, getCssText, createTheme, theme } = createStitches({
   utils: utils,
   media: {
@@ -84,6 +83,5 @@ export const { styled, css, globalCss, keyframes, getCssText, createTheme, theme
 
 globalCss({
   html: { fontSize: "16px" },
-  // "@md": { html: { fontSize: "16px" } },
   body: { lineHeight: 1.6, color: "$slate12", backgroundColor: "$slate2" },
 })();

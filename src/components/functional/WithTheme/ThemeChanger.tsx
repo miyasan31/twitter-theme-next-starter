@@ -1,15 +1,17 @@
 import { useTheme } from "next-themes";
-import type { VFC } from "react";
 import { useEffect, useState } from "react";
 
 import { Switch } from "~/components/ui/Switch";
 
-export const ThemeChanger: VFC = () => {
+/**
+ * @package
+ */
+export const ThemeChanger = () => {
   const { resolvedTheme, setTheme } = useTheme();
   const [isMounted, setIsMounted] = useState(false);
   const [currentTheme, setCurrentTheme] = useState("");
 
-  const handleClick = () => {
+  const onClick = () => {
     if (resolvedTheme) {
       const oppositeColor =
         resolvedTheme.indexOf("light") === 0
@@ -32,7 +34,7 @@ export const ThemeChanger: VFC = () => {
       labalRight="is dark"
       defaultChecked={currentTheme !== "light"}
       isDark
-      onClick={handleClick}
+      onClick={onClick}
     />
   );
 };
