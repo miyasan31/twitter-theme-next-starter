@@ -56,5 +56,16 @@ module.exports = {
       },
     ],
   },
-  overrides: [{ files: ["**/*.spec.js", "**/*.spec.jsx"], env: { jest: true } }],
+  overrides: [
+    {
+      files: ["*.page.ts", "*.page.tsx"],
+      rules: {
+        "import/no-default-export": "off",
+      },
+    },
+    {
+      files: ["**/*.spec.js", "**/*.spec.jsx"],
+      env: { jest: true },
+    },
+  ],
 };
