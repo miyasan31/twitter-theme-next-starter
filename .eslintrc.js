@@ -1,17 +1,15 @@
 module.exports = {
-  settings: {
-    react: { version: "detect" },
-  },
   env: { browser: true, es2021: true, node: true, jest: true },
   parser: "@typescript-eslint/parser",
-  parserOptions: {
-    ecmaFeatures: { jsx: true },
-    ecmaVersion: 13,
-    sourceType: "module",
-    project: "./tsconfig.json",
-  },
-  extends: ["eslint:recommended", "plugin:@typescript-eslint/recommended", "next/core-web-vitals", "prettier"],
-  plugins: ["import-access", "simple-import-sort"],
+  parserOptions: { project: "./tsconfig.json" },
+  extends: [
+    "eslint:recommended",
+    "plugin:@typescript-eslint/recommended",
+    "plugin:jsx-a11y/recommended",
+    "next/core-web-vitals",
+    "prettier",
+  ],
+  plugins: ["simple-import-sort", "import-access"],
   rules: {
     "linebreak-style": ["error", "unix"],
     "comma-dangle": "off",
@@ -22,9 +20,12 @@ module.exports = {
     "prefer-const": "error",
     "func-style": ["error", "expression"],
     "no-use-before-define": ["off", { paths: [{ name: "react", importNames: ["default"] }] }],
+
     "react/prop-types": "off",
     "react/react-in-jsx-scope": "off",
     "react/display-name": "off",
+    "react-hooks/rules-of-hooks": "error",
+    "react-hooks/exhaustive-deps": "warn",
     "react/jsx-handler-names": [
       "error",
       {
@@ -34,18 +35,44 @@ module.exports = {
         checkInlineFunction: true,
       },
     ],
-    "react-hooks/rules-of-hooks": "error",
-    "react-hooks/exhaustive-deps": "warn",
+
     "import/newline-after-import": "error",
     "import/no-default-export": "error",
+
     "import-access/jsdoc": "error",
+
     "simple-import-sort/imports": "error",
     "simple-import-sort/exports": "error",
+
     "@typescript-eslint/no-explicit-any": "off",
     "@typescript-eslint/no-var-requires": "off",
     "@typescript-eslint/explicit-module-boundary-types": "off",
     "@typescript-eslint/consistent-type-imports": ["error", { prefer: "type-imports" }],
     "@typescript-eslint/no-unused-vars": ["error", { varsIgnorePattern: "^_", argsIgnorePattern: "^_" }],
+    "@typescript-eslint/naming-convention": [
+      "error",
+      {
+        selector: ["typeLike"],
+        format: ["PascalCase"],
+      },
+      {
+        selector: ["function", "method"],
+        format: ["camelCase"],
+      },
+      {
+        selector: ["variable", "parameter"],
+        types: ["boolean", "string", "number", "array"],
+        format: ["camelCase", "UPPER_CASE"],
+      },
+      {
+        selector: "variable",
+        types: ["boolean"],
+        format: ["PascalCase"],
+        prefix: ["is", "should", "has", "no"],
+        filter: { regex: "^_", match: false },
+      },
+    ],
+
     "jsx-a11y/no-autofocus": "off",
     "jsx-a11y/anchor-is-valid": [
       "error",
@@ -58,7 +85,7 @@ module.exports = {
   },
   overrides: [
     {
-      files: ["*.page.ts", "*.page.tsx"],
+      files: ["src/pages/*", "src/pages/*"],
       rules: {
         "import/no-default-export": "off",
       },
